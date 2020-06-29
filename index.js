@@ -12,6 +12,6 @@ const nowServing = (arrayOfPeople) => {
 }
 
 const currentLine = (arrayOfPeople) => {
-   if(checkForEmptyArray(arrayOfPeople)) return `The line is currently empty.`);
+   if(checkForEmptyArray(arrayOfPeople)) return `The line is currently empty.`;
    return `The line is currently: ${arrayOfPeople.map((person, index) => (index === 0) ? `${index+1}. ${person}` : ` ${index+1}. ${person}`)}`; // whitespace is needed for every element after the first
 }
