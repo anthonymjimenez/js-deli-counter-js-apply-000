@@ -10,5 +10,5 @@ const nowServing = (arrayOfPeople) => {
 
 const currentLine = (arrayOfPeople) => {
   if(arrayOfPeople.length == 0) return `The line is currently empty`
-   return `The line is currently: ${arrayOfPeople.map((person, index) => `${index+ 1}. ${person} `)}`
+   return `The line is currently: ${arrayOfPeople.map((person, index) => `${index+ 1}. ${person}`)}`
 }
