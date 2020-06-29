@@ -1,6 +1,4 @@
-const guardClause = (array, message) => {
-  if(array.length === 0) return message 
-};
+const checkForEmptyArray = (array) => (isArray(array) && array > 1) ? true : false
 
 const takeANumber = (currentLine, newPerson) => {
   currentLine.push(newPerson);
@@ -8,12 +6,12 @@ const takeANumber = (currentLine, newPerson) => {
 }
 
 const nowServing = (arrayOfPeople) => {
-  guardClause(arrayOfPeople, 'There is nobody waiting to be served!');
+  if(checkForEmptyArray(arrayOfPeople)) return 'There is nobody waiting to be served!')
   const firstElm = arrayOfPeople.shift();
   return `Currently serving ${firstElm}.`;
 }
 
 const currentLine = (arrayOfPeople) => {
-   guardClause(arrayOfPeople, `The line is currently empty.`);
+   if(checkForEmptyArray(arrayOfPeople)) return `The line is currently empty.`);
    return `The line is currently: ${arrayOfPeople.map((person, index) => (index === 0) ? `${index+1}. ${person}` : ` ${index+1}. ${person}`)}`; // whitespace is needed for every element after the first
 }
