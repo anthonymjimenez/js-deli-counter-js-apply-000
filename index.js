@@ -1,4 +1,4 @@
-const isEmptyArray = (array) => (Array.isArray(array)) ? (array.length === 0) ? true : false : false // only passes true when 'array' argument is 1) An array and 2) Equal to Zero in Length
+const isEmptyArray = (array) => (Array.isArray(array)) ? (array.length === 0) ? true : false : false // only returns true when 'array' argument is 1) An array and 2) Equal to Zero in Length
 
 const takeANumber = (currentLine, newPerson) => {
   currentLine.push(newPerson);
@@ -7,11 +7,11 @@ const takeANumber = (currentLine, newPerson) => {
 
 const nowServing = (arrayOfPeople) => {
   if(isEmptyArray(arrayOfPeople)) return 'There is nobody waiting to be served!'
-  const firstElm = arrayOfPeople.shift();
-  return `Currently serving ${firstElm}.`;
+  const firstPerson = arrayOfPeople.shift();
+  return `Currently serving ${firstPerson}.`;
 }
 
 const currentLine = (arrayOfPeople) => {
    if(isEmptyArray(arrayOfPeople)) return `The line is currently empty.`;
-   return `The line is currently: ${arrayOfPeople.map((person, index) => (index === 0) ? `${index+1}. ${person}` : ` ${index+1}. ${person}`)}`; // whitespace is needed for every element after the first
+   return `The line is currently:${arrayOfPeople.map((person, index) => ` ${index+1}. ${person}`)}`; // whitespace is needed for every element after the first
 }
