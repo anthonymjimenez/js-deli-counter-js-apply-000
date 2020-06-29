@@ -1,4 +1,4 @@
-const isEmptyArray = (array) => (isArray(array)) ? (array.length === 0) ? true : false : false
+const isEmptyArray = (array) => (Array.isArray(array)) ? (array.length === 0) ? true : false : false
 
 const takeANumber = (currentLine, newPerson) => {
   currentLine.push(newPerson);
