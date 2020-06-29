@@ -1,4 +1,6 @@
-const guardClause = (array, message) => if(array.length === 0) message;
+const guardClause = (array, message) => {
+  if(array.length === 0) return message 
+};
 
 const takeANumber = (currentLine, newPerson) => {
   currentLine.push(newPerson);
