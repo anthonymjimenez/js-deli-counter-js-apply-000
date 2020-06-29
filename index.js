@@ -5,7 +5,7 @@ const takeANumber = (currentLine, newPerson) => {
 
 const nowServing = (arrayOfPeople) => {
   const firstElm = arrayOfPeople.shift();
-  return `Currently serving ${firstElm}`
+  return `Currently serving ${firstElm}.`
 }
 
 const currentLine = (arrayOfPeople) => {
