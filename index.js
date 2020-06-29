@@ -6,7 +6,7 @@ const takeANumber = (currentLine, newPerson) => {
 }
 
 const nowServing = (arrayOfPeople) => {
-  if(checkForEmptyArray(arrayOfPeople)) return 'There is nobody waiting to be served!')
+  if(checkForEmptyArray(arrayOfPeople)) return 'There is nobody waiting to be served!'
   const firstElm = arrayOfPeople.shift();
   return `Currently serving ${firstElm}.`;
 }
